@@ -41,11 +41,13 @@ event_id2 path2
 ### players.json
 
 - data: list
+
   {
   - player_id: str
   - data
     - name: str
     - team: str
+
   }
 
 ### attr.json
@@ -74,6 +76,7 @@ The rule is estimated by chatgpt with startgg event description.
 ### matches.json
 
 - data: list
+
   {
   - winner_id: str
   - loser_id: str
@@ -83,6 +86,7 @@ The rule is estimated by chatgpt with startgg event description.
   - pool: str
   - dq: bool
   - cancel: bool
+  
   }
 
 ### standings.json
