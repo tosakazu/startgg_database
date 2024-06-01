@@ -24,16 +24,16 @@ data
 ### tournaments.csv
 
 ```
-tournament_id1
-tournament_id2
+tournament_id1 tournament_name
+tournament_id2 tournament_name
 ...
 ```
 
 ### event2path.csv
 
 ```
-event_id1 path1
-event_id2 path2
+event_id1 date2 path1
+event_id2 date2 path2
 ....
 ```
 
@@ -43,22 +43,26 @@ event_id2 path2
 - data: list
 
   {
+  - version: str
   - player_id: str
   - data
     - name: str
     - team: str
+    - x_id: str
 
   }
 
 ### attr.json
 
 ```
+- version: str
 - event_id: str
 - tounament_name: str
 - event_name: str
 - date: str
 - region: str
 - num_entrants: int
+- offline: bool
 - rule: str
 ```
 
@@ -75,6 +79,7 @@ The rule is estimated by chatgpt with startgg event description.
 
 ### matches.json
 
+- version: str
 - data: list
 
   {
@@ -86,15 +91,17 @@ The rule is estimated by chatgpt with startgg event description.
   - pool: str
   - dq: bool
   - cancel: bool
-  
+  - chara_list: str
   }
 
 ### standings.json
 
+- version: str
 - data: list of str
   - { player_id1, player_id2, ... }
 
 ### seeds.json
 
+- version: str
 - data: list of str
   - { player_id1, player_id2, ... }
